@@ -1,1 +1,1 @@
-# AI-Project
+# This project is about Magic: The Gathering

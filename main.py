@@ -89,11 +89,16 @@ df=pd.read_csv("cards.csv")
 print(df.columns)
 # print((df.iloc[:5]).to_str())
 
-Vadrik=card("Vadrik, Astral Archmage", 3, 1, 2, "RU","Legenrary Creature", "Human Wizard", "If it’s neither day nor night, it becomes day as Vadrik, Astral Archmage enters the battlefield. Instant and sorcery spells you cast cost {X} less to cast, where X is Vadrik’s power.Whenever day becomes night or night becomes day, put a +1/+1 counter on Vadrik"  )
+# Vadrik=card("Vadrik, Astral Archmage", 3, 1, 2, "RU","Legenrary Creature", "Human Wizard", "If it’s neither day nor night, it becomes day as Vadrik, Astral Archmage enters the battlefield. Instant and sorcery spells you cast cost {X} less to cast, where X is Vadrik’s power.Whenever day becomes night or night becomes day, put a +1/+1 counter on Vadrik"  )
 
-rownumber=4
-row=df.iloc[4]
-print(row)
-color=df.loc[rownumber,"colors"]
-print(color)
+# rownumber=4
+# row=df.iloc[4]
+# print(row)
+# color=df.loc[rownumber,"colors"]
+# print(color)
+# print(df.availability)
+# print(df.colorIdentity)
 
+# print(df.cardsphereId)
+# df.drop("availability", 'boosterTypes','borderColor', 'cardKingdomEtchedId', 'cardKingdomFoilId',
+# 'cardKingdomId', 'cardParts'   , 'cardsphereId','edhrecRank' ,   axis=1)
