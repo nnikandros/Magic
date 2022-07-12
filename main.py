@@ -1,7 +1,6 @@
 import pandas as pd
 
-#hello Nikitas I'm a change, you can see that your local repo is now behind by one commit by "git status", and with "git pull" you'll get the commit locally
-
+#Hello Alex, my name is HAL9000. I have to inform you that the reason that the JSON files did not load is that they are not in the corrct format. CSV files will be easier to work.
 from pprint import pprint
 import json
 
@@ -90,6 +89,12 @@ df=pd.read_csv("cards.csv")
 # print(df['colors'])
 
 print(df.columns)
+## Ccolumns worth keeping.
+##column "type" should be renamed as type_line or type-line
+#print(df[["name","colors","convertedManaCost","hand", 'loyalty', 'manaCost',"text","type","types","rarity","toughness","power" ]])
+
+print(df.manaCost)
+
 # print((df.iloc[:5]).to_str())
 
 # Vadrik=card("Vadrik, Astral Archmage", 3, 1, 2, "RU","Legenrary Creature", "Human Wizard", "If it’s neither day nor night, it becomes day as Vadrik, Astral Archmage enters the battlefield. Instant and sorcery spells you cast cost {X} less to cast, where X is Vadrik’s power.Whenever day becomes night or night becomes day, put a +1/+1 counter on Vadrik"  )
