@@ -6,10 +6,10 @@ dfset0 = pd.read_csv("set0.csv")
 
 
 class card:
-       def __init__(self, name):  #manaCost, cmc, colorIdentity, artist, number, type,
+       def __init__(self, name,  manaCost ): # , cmc, colorIdentity, artist, number, type,
      #   text, printings, flavor, layout, multiverseid, power,toughness, rarity, subtypes, types):
            self.name = name
-            # self.manaCost =manaCost
+           self.manaCost =manaCost
             # self.cmc = cmc
             # self.colorIdentity = colorIdentity
             # self.artist = artist
@@ -29,9 +29,11 @@ class card:
 
 
 
-name=dfset0.iloc[1]["name"]
-testobject=card(name)
+name=dfset0.iloc[1]["name"] # same as dfset0[1].name
+manaCost=dfset0.iloc[1].manaCost
+testobject=card(name,manaCost)
 print(testobject.name)
+print(testobject.manaCost)
 
 
 
