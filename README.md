@@ -1,7 +1,11 @@
-# This project is about Magic: The Gathering
+# Magic: The Gathering via Python
 
+The idea of the project is to construct a game of Magic: The Gathering via Python
 
+Some resourses that we using:
 
-(Magic)[https://magic.wizards.com/en]
+-[MTG-Official](https://magic.wizards.com/en)
 
-(MtgWiki)[https://mtg.fandom.com/wiki/Main_Page]
+-[MTGWiki](https://mtg.fandom.com/wiki/Main_Page)
+
+-[MTGJSON](https://mtgjson.com/)
