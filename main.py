@@ -6,6 +6,7 @@ import pandas as pd
 
 dfset0 = pd.read_csv("set0.csv")
 
+print(dfset0)
 
 
 
@@ -62,6 +63,8 @@ print(deck2[5].typeline)
 
 hand1 = random.sample(deck1,7)
 
+##begin game
+
 for card in hand1:
     print(card.cardname)
 redraw = input("Do you want a redraw? yes or no? ")
@@ -87,6 +90,8 @@ exilezone2=[]
 
 #hand1= sample deck1 of seven cards
 #hand2= sample deck2 of seven cards
+
+#random.shuffle() shuffles a list in place,
 
 # do you keep the nad y/n?
 
