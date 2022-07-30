@@ -6,6 +6,8 @@ dfset0 = pd.read_csv("set0.csv")
 
 
 
+
+
 class card:
        def __init__(self, cardname,manaCost,cmc,colorIdentity ,typeline,text, power,toughness,types,subtypes): # , artist,, ,, rarity): #, ):
            self.cardname = cardname
