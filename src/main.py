@@ -18,7 +18,7 @@ path_to_deck2=  f"{path_to_decks}\Deck2.csv"
 
 
 a=1
-# deck1=pd.read_csv("C:\Users\nnika\Documents\GitHub\AI-Project\Data\Decks\Deck1.csv")
+# deck1=pd.read_csv("C:\Users\nnika\Documents\GitHub\AI-Project\data\Decks\Deck1.csv")
 # deck2=pd.read
 
 
