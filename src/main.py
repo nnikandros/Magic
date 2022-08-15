@@ -38,8 +38,8 @@ path_to_deck2 = path_to_decks/"deck2.csv"
 deck1=pd.read_csv(path_to_deck1)
 deck2 = pd.read_csv(path_to_deck2)
 
-deck1=[transform_row_to_card(deck1,i) for i in range(60)] # use iterrows()
-hand1 = random.sample(deck1,7)
+deck1 = [transform_row_to_card(deck1,i) for i in range(60)] # use iterrows()
+hand1 = random.sample(deck1 , 7)
 #begin game
 
 for card in hand1:
