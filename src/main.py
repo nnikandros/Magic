@@ -1,31 +1,6 @@
 import random
-
 import pandas as pd
-
 from pathlib import Path
-
-root_dir = Path(__file__).parent.parent
-print(root_dir)
-
-#
-# print(dfset0)
-print(root_dir)
-path_to_decks = root_dir/"data"/"Decks" #in non-Windows operating systems like mine paths are not written with backslashes, this way it works on every os
-
-# dfset0 = pd.read_csv("set0.csv")
-path_to_deck1 = path_to_decks/"Deck1.cvs"
-path_to_deck2 = path_to_decks/"Deck2.cvs"
-
-# path_to_deck2=  f"{path_to_decks}\Deck2.csv"
-
-a=1
-deck1=pd.read_csv(path_to_deck1)
-
-
-
-def brake(self):
-    self.speed -= 5
-
 
 class card:
        def __init__(self, cardname,manaCost,cmc,colorIdentity ,typeline,text, power,toughness,types,subtypes): # , artist,, ,, rarity): #, ):
@@ -33,23 +8,15 @@ class card:
            self.manaCost = manaCost
            self.cmc = cmc
            self.colorIdentity = colorIdentity
-           # self.artist = artist
            self.typeline = typeline
            self.text = text
            self.power = power
            self.toughness = toughness
-           # self.rarity=rarity
            self.types = types
            self.subtypes = subtypes
-              # self.flavor = flavor
-            # self.layout = layout
-             #self.multiverseid = multiverseid
-           #self.printings = printings
-
-
 
 def transform_row_to_card(dfset0, row_number):
-    cardname = dfset0.iloc[row_number]["name"]       # equivalently dfset0.at[1,"name"]
+    cardname = dfset0.iloc[row_number]["name"]
     manaCost = dfset0.iloc[row_number]["manaCost"]
     cmc = dfset0.iloc[row_number]["cmc"]
     colorIdentity = dfset0.iloc[row_number]["colorIdentity"]
@@ -63,65 +30,42 @@ def transform_row_to_card(dfset0, row_number):
     testobject = card(cardname,manaCost,cmc,colorIdentity,typeline,text,power,toughness,types,subtypes)
     return testobject
 
-transform_row_to_card(dfset0,0)
-print(transform_row_to_card(dfset0,0))
-# print(transform_row_to_card(dfset0,0).manaCost)
-#
-# # deck1= [transform_row_to_card(dfset0,0), transform_row_to_card(dfset0,1)]
-#
-# deck1=[transform_row_to_card(dfset0,i) for i in range(60)]
-#
-# print(deck1[3].cardname)
-#
-# deck2=[transform_row_to_card(dfset0,i) for i in range(60,120)]
-#
-# print(deck2[5].typeline)
-#
-# hand1 = random.sample(deck1,7)
-#
-# ##begin game
-#
-# for card in hand1:
-#     print(card.cardname)
-# redraw = input("Do you want a redraw? yes or no? ")
-# print(f"The player chose {redraw}")
-#
-# if redraw == "yes":
-#     hand1 = random.sample(deck1, 7)
-# for card in hand1:
-#     print(card.cardname)
-#
-#
-#
-#
-#
-#
-#
-#
-#
-# graveyard1=[]
-# graveyard2=[]
-# exilezone1=[]
-# exilezone2=[]
+
+root_dir = Path(__file__).parent.parent
+path_to_decks = root_dir/"data"/"decks"
+path_to_deck1 = path_to_decks/"deck1.csv"
+path_to_deck2 = path_to_decks/"deck2.csv"
+deck1=pd.read_csv(path_to_deck1)
+deck2 = pd.read_csv(path_to_deck2)
+
+deck1=[transform_row_to_card(deck1,i) for i in range(60)] # use iterrows()
+hand1 = random.sample(deck1,7)
+#begin game
+
+for card in hand1:
+    print(card.cardname)
+redraw = input("Do you want a redraw? yes or no? ")
+print(f"The player chose {redraw}")
+
+if redraw == "yes":
+    hand1 = random.sample(deck1, 7)
+for card in hand1:
+    print(card.cardname)
+
+graveyard1=[]
+graveyard2=[]
+exilezone1=[]
+exilezone2=[]
 
 #hand1= sample deck1 of seven cards
-#hand2= sample deck2 of seven cards
+# hand2= sample deck2 of seven cards
+#
+# random.shuffle() #shuffles a list in place,
+#
+# do you keep the hand y/n?
 
-#random.shuffle() shuffles a list in place,
-
-# do you keep the nad y/n?
 
 
-# print(testobject.cardname)
-# print(testobject.manaCost)
-# print(testobject.cmc)
-# print(testobject.typeline)
-# print(testobject.colorIdentity)
-# print(testobject.text)
-# print(testobject.power)
-# print(testobject.toughness)
-# print(testobject.types)
-# print(testobject.subtypes)
 
 
 
