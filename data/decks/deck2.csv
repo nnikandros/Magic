@@ -1,0 +1,5 @@
+name,manaCost,cmc,colorIdentity,artist,number,type,text,printings,flavor,layout,multiverseid,power,toughness,rarity,subtypes,types
+Argothian Elder,{3}{G},4,G,DiTerlizzi,,Creature — Elf Druid,{T}: Untap two target lands.,"USG,BRB","Sharpen your ears\n—Elvish expression meaning\n""grow wiser""",normal,21182,2,2,Uncommon,"Elf,Druid",Creature
+Armored Pegasus,{1}{W},2,W,Una Fricker,,Creature — Pegasus,Flying,"POR,pPOD,TMP,ATH,6ED,BRB,S00,TPR","""I always charge a little extra to take on a pegasus. They fly like eagles, kick like mules, and hide like hermits.""\n—Tahlil en-Dal, bounty hunter",normal,21120,1,2,Common,Pegasus,Creature
+Azure Drake,{3}{U},4,U,Janine Johnston,,Creature — Drake,Flying,"LEG,CHR,5ED,BRB,9ED,M11","Little dreamt could seem so cruel\nAs waiting for the wings outspread,\nThe jagged teeth, the burning eyes,\nAnd dagger-claws that clench to nerves.",normal,21122,2,4,Uncommon,Drake,Creature
+Blinking Spirit,{3}{W},4,W,L. A. Williams,,Creature — Spirit,{0}: Return Blinking Spirit to its owner's hand.,"ICE,5ED,BRB,9ED","""Don't look at it! Maybe it'll go away!""\n—Ib Halfheart, goblin tactician",normal,11177,2,2,Rare,Spirit,Creature
