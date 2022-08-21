@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 class Card:
-    def __init__(self, card_name, mana_cost, cmc, color_identity, type_line,text,types,subtypes, tapped_status): # , artist,, ,, rarity): #, ):
+    def __init__(self, card_name, mana_cost, cmc, color_identity, type_line, text, types,subtypes, tapped_status=""): # , artist,, ,, rarity): #, ):
         self.card_name = card_name
         self.mana_cost = mana_cost
         self.cmc = cmc
@@ -45,6 +45,19 @@ class Enchantment(Card):
 
 class Artifact(Card):
     pass
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -89,7 +102,20 @@ print(u.type_line)
 # deck2 = pd.read_csv(path_to_deck2)
 #
 # deck1 = [transform_row_to_card(deck1,i) for i in range(60)] # use iterrows()
-# hand1 = random.sample(deck1 , 7)
+# hand1 = random.sample(deck1 , 7) # wrong should be [deck1.pop() for _ in range(6)]
+# deck2
+#hand
+Player1 = input("Please give name of the first player: ")
+Player2 = input("Please give name of the second player: ")
+choice = input("To determine which players plays first, please choose Heads or Tails: ")
+print(f"Player chose {choice}")
+result = random.choice(["Heads", "Tails"])
+print(f"The result of the coin toss was {result}")
+if choice == result:
+    print(f"{Player1} goes first!")
+else:
+    print(f"{Player2} goes first! ")  # to fix
+
 # #begin game
 #
 # for card in hand1:
