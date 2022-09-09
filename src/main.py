@@ -16,8 +16,14 @@ class Card:
         self.tapped_status = tapped_status
         self.total = card_name, mana_cost, type_line, text
 
+
+    def __repr__(self):
+        return f"Card({self.card_name},{self.mana_cost},{self.cmc}, {self.color_identity}, {self.type_line}, {self.text}, {self.types}, {self.subtypes})"
+
+
     def display(self):
-        print(self.total)
+        return f"{self.card_name}\t{self.mana_cost}\n{self.type_line}\n{self.text}"
+
 
 
     def tap(self):
@@ -70,8 +76,10 @@ class Deck(list):
         return random.shuffle(self)
 
     def draw(self, lst):
-        card = self.pop()
-        return lst.append(card)  # lst.append(self.pop())
+        """ Function that draws a card and appends it to the list proved as argument. For example
+        deck1.draw(myhand) draws a card and put its into the list myhand.
+        """
+        return lst.append(self.pop())
 
 
 class Hand(list):
@@ -83,22 +91,24 @@ class Stack(list):
     pass
 
 
-
+card = Card("Archon", "5{W}",6,"{W}","Creature - archon","","Creature","Archon")
+print(card.display())
+print(card)
 #
 #
-# def transform_row_to_card(dfset0, row_number):
-#     cardname = dfset0.iloc[row_number]["name"]
-#     manaCost = dfset0.iloc[row_number]["manaCost"]
-#     cmc = dfset0.iloc[row_number]["cmc"]
-#     colorIdentity = dfset0.iloc[row_number]["colorIdentity"]
-#     # artist = dfset0.iloc[1]["artist"]
-#     typeline = dfset0.iloc[row_number]["type"]
-#     text=dfset0.iloc[row_number]["text"]
-#     power=dfset0.iloc[row_number]["power"]
-#     toughness=dfset0.iloc[row_number]["toughness"]
-#     types = dfset0.iloc[row_number]["types"]
-#     subtypes = dfset0.iloc[row_number]["subtypes"]
-#     testobject = card(cardname,manaCost,cmc,colorIdentity,typeline,text,power,toughness,types,subtypes)
+# def transform_row_to_card(pdframe, row_number):
+#     card_name = pdframe.iloc[row_number]["name"]
+#     mana_cost = pdframe.iloc[row_number]["manaCost"]
+#     cmc = pdframe.iloc[row_number]["cmc"]
+#     color_identity = pdframe.iloc[row_number]["colorIdentity"]
+#     # artist = pdframe.iloc[1]["artist"]
+#     type_line = pdframe.iloc[row_number]["type"]
+#     text=pdframe.iloc[row_number]["text"]
+#     power=pdframe.iloc[row_number]["power"]
+#     toughness=pdframe.iloc[row_number]["toughness"]
+#     types = pdframe.iloc[row_number]["types"]
+#     subtypes = pdframe.iloc[row_number]["subtypes"]
+#     testobject = card(card_name,mana_cost,cmc,color_identity,typeline,text,power,toughness,types,subtypes)
 #     return testobject
 #
 #
@@ -113,22 +123,22 @@ class Stack(list):
 
 # deck2 =
 
-player1 = input("Please give name of the first player:")
-player2 = input("Please give name of the second player:")
-players = [player1, player2]  #to be used for cycle itertools
-choice = input("To determine which player takes the first turn, please choose Heads or Tails:")
-print(f"Player chose {choice}")
-result = random.choice(["Heads", "Tails"])
-print(f"The result of the coin toss was {result}")
-if choice == result:
-    print(f"{player1} goes first!")
-else:
-    print(f"{player2} goes first! ")  # to fix
+# player1 = input("Please give name of the first player:")
+# player2 = input("Please give name of the second player:")
+# players = [player1, player2]  #to be used for cycle itertools
+# choice = input("To determine which player takes the first turn, please choose Heads or Tails:")
+# print(f"Player chose {choice}")
+# result = random.choice(["Heads", "Tails"])
+# print(f"The result of the coin toss was {result}")
+# if choice == result:
+#     print(f"{player1} goes first!")
+# else:
+#     print(f"{player2} goes first! ")  # to fix
 
 
 
 # #begin game
-print(f"Each player will now draw 7 cards and decide if they want a mulligan")
+# print(f"Each player will now draw 7 cards and decide if they want a mulligan")
 ## hand1 = [deck1.pop() for _ in range(7)]
 # #hand2 = [deck2.pop() for _ in range(7)]
 # graveyard1=[]
