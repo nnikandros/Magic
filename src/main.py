@@ -94,77 +94,77 @@ class Stack(list):
 card = Card("Archon", "5{W}",6,"{W}","Creature - archon","","Creature","Archon")
 print(card.display())
 print(card)
-#
-#
-# def transform_row_to_card(pdframe, row_number):
-#     card_name = pdframe.iloc[row_number]["name"]
-#     mana_cost = pdframe.iloc[row_number]["manaCost"]
-#     cmc = pdframe.iloc[row_number]["cmc"]
-#     color_identity = pdframe.iloc[row_number]["colorIdentity"]
-#     # artist = pdframe.iloc[1]["artist"]
-#     type_line = pdframe.iloc[row_number]["type"]
-#     text=pdframe.iloc[row_number]["text"]
-#     power=pdframe.iloc[row_number]["power"]
-#     toughness=pdframe.iloc[row_number]["toughness"]
-#     types = pdframe.iloc[row_number]["types"]
-#     subtypes = pdframe.iloc[row_number]["subtypes"]
-#     testobject = card(card_name,mana_cost,cmc,color_identity,typeline,text,power,toughness,types,subtypes)
-#     return testobject
-#
-#
-# root_dir = Path(__file__).parent.parent
-# path_to_decks = root_dir/"data"/"decks"
-# path_to_deck1 = path_to_decks/"deck1.csv"
-# path_to_deck2 = path_to_decks/"deck2.csv"
-# deck1=pd.read_csv(path_to_deck1)
-# deck2 = pd.read_csv(path_to_deck2)
-#
-# deck1 = [transform_row_to_card(deck1,i) for i in range(60)] # use iterrows()
-
-# deck2 =
-
-# player1 = input("Please give name of the first player:")
-# player2 = input("Please give name of the second player:")
-# players = [player1, player2]  #to be used for cycle itertools
-# choice = input("To determine which player takes the first turn, please choose Heads or Tails:")
-# print(f"Player chose {choice}")
-# result = random.choice(["Heads", "Tails"])
-# print(f"The result of the coin toss was {result}")
-# if choice == result:
-#     print(f"{player1} goes first!")
-# else:
-#     print(f"{player2} goes first! ")  # to fix
 
 
+def transform_row_to_card(pdframe, row_number):
+    card_name = pdframe.iloc[row_number]["name"]
+    mana_cost = pdframe.iloc[row_number]["manaCost"]
+    cmc = pdframe.iloc[row_number]["cmc"]
+    color_identity = pdframe.iloc[row_number]["colorIdentity"]
+    # artist = pdframe.iloc[1]["artist"]
+    type_line = pdframe.iloc[row_number]["type"]
+    text=pdframe.iloc[row_number]["text"]
+    power=pdframe.iloc[row_number]["power"]
+    toughness=pdframe.iloc[row_number]["toughness"]
+    types = pdframe.iloc[row_number]["types"]
+    subtypes = pdframe.iloc[row_number]["subtypes"]
+    testobject = card(card_name,mana_cost,cmc,color_identity,typeline,text,power,toughness,types,subtypes)
+    return testobject
 
-# #begin game
-# print(f"Each player will now draw 7 cards and decide if they want a mulligan")
-## hand1 = [deck1.pop() for _ in range(7)]
-# #hand2 = [deck2.pop() for _ in range(7)]
-# graveyard1=[]
-# graveyard2=[]
-# exilezone1=[]
-# exilezone2=[]
 
-# for card in hand1:
-#     print(card.cardname)
-# redraw = input("Do you want a redraw? yes or no?")
-# print(f"The player chose {redraw}")
+root_dir = Path(__file__).parent.parent
+path_to_decks = root_dir/"data"/"decks"
+path_to_deck1 = path_to_decks/"deck1.csv"
+path_to_deck2 = path_to_decks/"deck2.csv"
+deck1=pd.read_csv(path_to_deck1)
+deck2 = pd.read_csv(path_to_deck2)
+
+deck1 = [transform_row_to_card(deck1,i) for i in range(60)] # use iterrows()
+
+deck2 =
+
+player1 = input("Please give name of the first player:")
+player2 = input("Please give name of the second player:")
+players = [player1, player2]  #to be used for cycle itertools
+choice = input("To determine which player takes the first turn, please choose Heads or Tails:")
+print(f"Player chose {choice}")
+result = random.choice(["Heads", "Tails"])
+print(f"The result of the coin toss was {result}")
+if choice == result:
+    print(f"{player1} goes first!")
+else:
+    print(f"{player2} goes first! ")  # to fix
+
+
+
+#begin game
+print(f"Each player will now draw 7 cards and decide if they want a mulligan")
+hand1 = [deck1.pop() for _ in range(7)]
+hand2 = [deck2.pop() for _ in range(7)]
+graveyard1=[]
+graveyard2=[]
+exilezone1=[]
+exilezone2=[]
+
+for card in hand1:
+    print(card.cardname)
+redraw = input("Do you want a redraw? yes or no?")
+print(f"The player chose {redraw}")
+
+if redraw == "yes":
+    hand1 = random.sample(deck1, 7)
+for card in hand1:
+    print(card.cardname)
+
+graveyard1=[]
+graveyard2=[]
+exilezone1=[]
+exilezone2=[]
+
+#hand1= sample deck1 of seven cards
+# hand2= sample deck2 of seven cards
 #
-# if redraw == "yes":
-#     hand1 = random.sample(deck1, 7)
-# for card in hand1:
-#     print(card.cardname)
-#
-# graveyard1=[]
-# graveyard2=[]
-# exilezone1=[]
-# exilezone2=[]
-#
-# #hand1= sample deck1 of seven cards
-# # hand2= sample deck2 of seven cards
-# #
-# # random.shuffle() #shuffles a list in place,
+# random.shuffle() #shuffles a list in place,
 # #
 # # do you keep the hand y/n?
 
